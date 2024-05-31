@@ -1,19 +1,19 @@
 import React, {FC, ReactNode} from "react";
 import classNames from "classnames";
-import './Button.scss';
+import style from './Button.module.scss';
 
 interface IButtonProps {
     children: ReactNode;
-    onClick?: () => void;
+    onClick: () => void;
     isActive: boolean;
 }
 
 export const Button: FC<IButtonProps> = ({children, onClick, isActive}) => {
     return (
-        <button onClick={onClick} className={classNames('btn', {
-            'btn-active': isActive,
+        <button onClick={onClick} className={classNames(style.btn, {
+            [style['btn-active']] : isActive,
         })}>
             {children}
         </button>
     )
-}
+};

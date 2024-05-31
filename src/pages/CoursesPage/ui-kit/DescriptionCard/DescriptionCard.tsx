@@ -1,11 +1,11 @@
 import React from 'react';
-import './DescriptionCard.scss'
+import style from './DescriptionCard.module.scss';
 
 interface IDescriptionCard {
     name: string;
 }
 export const DescriptionCard: React.FC<IDescriptionCard> = ({name}) => {
     return (
-        <div style={{padding: '12px 18px 18px 18px'}}>{name}</div>
+        <div className={style.description}>{name}</div>
     );
 };

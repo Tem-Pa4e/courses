@@ -1,8 +1,8 @@
-.card {
+.card_block {
   border-radius: 18px;
-  max-height: 210px;
+  max-height: 228px;
   overflow: hidden;
-  box-shadow: 0 10px 13px -4px #23235F30;
+  box-shadow: 0 10px 13px -4px var(--color-shadow);
   transition: box-shadow 0.3s ease-in-out;
 }
 

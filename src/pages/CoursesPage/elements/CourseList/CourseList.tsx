@@ -1,5 +1,5 @@
 import React from 'react';
-import './CoursesList.scss'
+import style from './CoursesList.module.scss';
 import {Button} from "../../ui-kit";
 
 interface ICoursesList {
@@ -8,17 +8,21 @@ interface ICoursesList {
     activeTheme: number
 }
 
-export const CoursesList: React.FC<ICoursesList> = ({tags, handleThemeClick, activeTheme}) => {
+export const CourseList: React.FC<ICoursesList> = React.memo(({tags, handleThemeClick, activeTheme}) => {
+    console.log('list')
     return (
-        <nav className='navigation'>
+        <nav className={style.navigation}>
             <ul>
                 {tags.map((tag, index) => <li key={index}>
                     <Button
                         onClick={() => handleThemeClick(index)}
                         isActive={index === activeTheme}>
-                        {tag}
-                    </Button></li>)}
+                        <span className={style.text}>
+                            {tag}
+                        </span>
+                    </Button>
+                </li>)}
             </ul>
         </nav>
     );
-};
+});

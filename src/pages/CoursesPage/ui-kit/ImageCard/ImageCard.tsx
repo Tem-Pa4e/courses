@@ -1,5 +1,5 @@
 import React from 'react';
-import './ImageCard.scss'
+import style from './ImageCard.module.scss';
 
 interface IImageCard {
     bgColor: string;
@@ -8,8 +8,8 @@ interface IImageCard {
 }
 export const ImageCard: React.FC<IImageCard> = ({bgColor, image, name}) => {
     return (
-        <div style={{backgroundColor: bgColor}} className='imageBlock'>
-            <img className='image' src={image} alt={name}/>
+        <div style={{backgroundColor: bgColor}} className={style.imageBlock}>
+            <img className={style.image} src={image} alt={name}/>
         </div>
     );
 };

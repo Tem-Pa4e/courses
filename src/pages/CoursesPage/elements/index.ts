@@ -1,1 +1,2 @@
-export {CoursesList} from './TagsList/CoursesList'
+export {CourseList} from './CourseList/CourseList';
+export {CourseCards} from './CourseCards/CourseCards';

@@ -1,13 +1,44 @@
-body {
+@font-face {
+  font-family: 'Nunito';
+  src: url('assets/fonts/Nunito-Italic-VariableFont_wght.ttf') format('ttf'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+
+  text-decoration: none;
+  list-style-type: none;
+
+  border: 0;
+}
+
+
+
+*, *::before,
+*::after {
+  box-sizing: border-box;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 18px;
+  color: var(--color-text);
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  /* -------colors------ */
+  --color-text: #39414B;
+  --color-button: #5FBF77;
+  --color-border: #CFCFE4;
+  --color-white: #FFFFFF;
+  --color-shadow: #23235F30;
 }
+
