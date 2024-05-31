@@ -1,0 +1,21 @@
+.navigation {
+  min-width: 264px;
+  box-sizing: border-box;
+  height: max-content;
+  padding: 12px;
+  outline: 1px solid #CFCFE4;
+  border-radius: 18px;
+
+
+}
+
+.text {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  line-height: 18px;
+  font-size: 18px;
+  letter-spacing: -0.1px;
+
+  cursor: pointer;
+  padding: 12px;
+}

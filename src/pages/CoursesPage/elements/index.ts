@@ -1,0 +1,1 @@
+export {CoursesList} from './TagsList/CoursesList'

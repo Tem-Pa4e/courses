@@ -1,0 +1,11 @@
+.main {
+    display: flex;
+    gap: 24px;
+}
+
+.cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 18px;
+}
