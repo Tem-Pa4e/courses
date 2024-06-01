@@ -3,7 +3,7 @@ import style from './CourseCards.module.scss';
 import {DescriptionCard, ImageCard} from "../../ui-kit";
 import { IData } from '../../../../api/api';
 interface ICoursesCards {
-    card: IData
+    card: IData;
 }
 export const CourseCards: React.FC<ICoursesCards> = React.memo(({card}) => {
     return (

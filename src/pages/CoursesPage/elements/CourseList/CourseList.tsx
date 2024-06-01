@@ -5,11 +5,10 @@ import {Button} from "../../ui-kit";
 interface ICoursesList {
     tags: string[];
     handleThemeClick: (index: number) => void;
-    activeTheme: number
+    activeTheme: number;
 }
 
 export const CourseList: React.FC<ICoursesList> = React.memo(({tags, handleThemeClick, activeTheme}) => {
-    console.log('list')
     return (
         <nav className={style.navigation}>
             <ul>

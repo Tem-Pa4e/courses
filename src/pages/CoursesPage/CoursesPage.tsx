@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import {CourseCards, CourseList} from "./elements";
-import style from   './CoursesPage.module.scss'
+import style from   './CoursesPage.module.scss';
 import {IData} from "../../api/api";
+import {filterCourses} from "../../common/utils/filterCourses";
 
 interface ICoursesPage {
     tags: string[];
@@ -13,11 +14,7 @@ export const CoursesPage: React.FC<ICoursesPage> = ({tags, courses}) => {
         setActiveTheme(index);
     };
 
-    let filteredCourses: IData[] = courses
-
-    if (tags[activeTheme] && activeTheme !== 0) {
-        filteredCourses = courses.filter(el => el.tags.includes(tags[activeTheme]));
-    }
+    const filteredCourses = filterCourses(courses, activeTheme, tags);
 
     return (
         <div className={style.course_block}>
